@@ -25,7 +25,7 @@ func New(ts int64, lHash string, hash string, data string, nonce int, diff int) 
 	return &Block{Timestamp: ts, LastHash: lHash, Hash: hash, Data: data, Nonce: nonce, Difficulty: diff}
 }
 
-func (b *Block) String() string {
+func (b Block) String() string {
 	return fmt.Sprintf("Timestamp: %d LastHash: %s Hash: %s Nonce: %d Difficulty: %d Data: %s", b.Timestamp, b.LastHash, b.Hash, b.Nonce, b.Difficulty, b.Data)
 }
 
